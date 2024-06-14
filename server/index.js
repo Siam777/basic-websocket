@@ -14,6 +14,7 @@ const wss = new WebSocketServer({ server });
 wss.on("connection", (ws) => {
    ws.on("message", (data) => {
       console.log("data from client %s:", data);
+      console.log("test");
       ws.send("Thanks");
    })
 });
